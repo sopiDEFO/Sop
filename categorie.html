@@ -1,7 +1,4 @@
-<?php
 
-require_once('cnx.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -48,25 +45,8 @@ require_once('cnx.php');
     </nav>
     <main>
        
-       <h1>ajouter mon vote</h1>
-   <?php
-   if(isset($_POST['ajouter'])){
-       $sql = 'INSERT INTO categorie
-                      (categorie) VALUE (:categorie)';
-         $req = $cnx->prepare($sql);    
-
-        $retour = $req->execute(array(
-                         ':categorie'=>$_POST['categorie']
-         ));         
-         if($retour){
-                 echo'<div class="success">votre vote a bien ete pris en compte</div>';
-         } else{
-            echo '<div class="error">votre vote a ete enregistrer</div>';
-         }
-
-   }
-   ?>
-
+       <h1>l'agen facile n'est pas bien travaille broe</h1>
+   
        <form action="" method="post">
            <input type="text" name="categorie" placeholder="mon vote" required>
            <input type="submit" name="ajouter" value="ajouter">
